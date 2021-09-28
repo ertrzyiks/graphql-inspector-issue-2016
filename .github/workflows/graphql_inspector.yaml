@@ -1,0 +1,18 @@
+name: Graphql Inspector
+
+on: [push]
+
+jobs:
+  check:
+    name: Check Schema
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@master
+
+      - uses: kamilkisiela/graphql-inspector@master
+        with:
+          name: 'Check Talent Schema'
+          schema: 'main:schema.graphql'
+

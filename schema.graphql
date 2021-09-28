@@ -1,0 +1,18 @@
+enum OrderEnum {
+    ASC
+    DESC
+}
+
+input OrderByInput {
+    order: OrderEnum!
+}
+
+type Item{
+    id: String
+}
+
+type Query {
+    list(
+        orderBy: [OrderByInput!] = [{order: DESC}]
+    ): [Item!]!
+}
