@@ -13,6 +13,6 @@ jobs:
 
       - uses: kamilkisiela/graphql-inspector@master
         with:
-          name: 'Check Talent Schema'
+          name: 'Check Schema'
           schema: 'main:schema.graphql'
 
