@@ -9,6 +9,7 @@ input OrderByInput {
 
 type Item{
     id: String
+    name: String
 }
 
 type Query {
