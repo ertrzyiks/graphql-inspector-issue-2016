@@ -11,8 +11,21 @@ jobs:
       - name: Checkout
         uses: actions/checkout@master
 
-      - uses: kamilkisiela/graphql-inspector@master
+      - uses: actions/setup-node@v2
         with:
-          name: 'Check Schema'
-          schema: 'main:schema.graphql'
+          node-version: '12'
+
+      - name: 'Install'
+        run:
+          yarn add @graphql-inspector/cli graphql
+
+      - name: 'Test'
+        run:
+          yarn graphql-inspector diff schema.graphql _schema.graphql
+
+
+#      - uses: kamilkisiela/graphql-inspector@master
+#        with:
+#          name: 'Check Schema'
+#          schema: 'main:schema.graphql'
 
