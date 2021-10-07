@@ -13,6 +13,6 @@ type Item{
 
 type Query {
     list(
-        orderBy: [OrderByInput!] = [{order: DESC}]
+        orderBy: [OrderByInput!] = {order: DESC}
     ): [Item!]!
 }
