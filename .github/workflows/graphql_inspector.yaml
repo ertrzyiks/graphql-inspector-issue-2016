@@ -23,9 +23,8 @@ jobs:
         run:
           yarn graphql-inspector diff schema.graphql _schema.graphql
 
-
-#      - uses: kamilkisiela/graphql-inspector@master
-#        with:
-#          name: 'Check Schema'
-#          schema: 'main:schema.graphql'
+      - uses: kamilkisiela/graphql-inspector@master
+        with:
+          name: 'Check Schema'
+          schema: 'main:schema.graphql'
 
