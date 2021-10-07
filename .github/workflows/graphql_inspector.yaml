@@ -15,7 +15,7 @@ jobs:
         with:
           node-version: '12'
 
-      - name: 'Instalsl'
+      - name: 'Install'
         run:
           yarn add @graphql-inspector/cli graphql
 
