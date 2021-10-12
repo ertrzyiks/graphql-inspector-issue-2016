@@ -1,0 +1,12 @@
+{
+  "name": "graphql-inspector-issue-2016",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:ertrzyiks/graphql-inspector-issue-2016.git",
+  "author": "ertrzyiks <mateusz.derks@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@graphql-inspector/cli": "^3.0.1",
+    "graphql": "^15.6.0"
+  }
+}
