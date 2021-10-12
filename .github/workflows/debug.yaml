@@ -1,0 +1,21 @@
+name: Debug
+
+on:
+  workflow_run:
+    workflows: ["Graphql Inspector"]
+    types: [completed]
+
+jobs:
+  check:
+    name: Check Schema
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@master
+
+      - name: Dump workflow context
+        env:
+          WORKFLOW_CONTEXT: ${{ toJSON(github.event.workflow_run) }}
+        run: echo "WORKFLOW_CONTEXT"
+
